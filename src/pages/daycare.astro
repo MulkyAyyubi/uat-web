@@ -1,0 +1,114 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import '@fontsource/barlow'
+import '@fontsource/barlow/600.css'
+import '@fontsource/barlow/700.css'
+import '@fontsource/barlow/800.css'
+import '@fontsource/barlow/900.css'
+---
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daycare</title>
+</head>
+
+<body>
+    <Navbar />
+    <div class="flex flex-col bg-light">
+        <img class="w-full h-[300px] md:h-[400px] lg:h-[600px] object-cover" src="img/hero-daycare.jpg" alt="">
+            <div class="flex flex-col lg:flex-row px-[400px] md:px-[150px] xl:px-[250px] 2xl:px-[400px] gap-5 my-[40px] md:my-[80px]">
+                <h1 class="text-3xl md:text-4xl lg:text-6xl text-left text-dark font-extrabold min-w-72">Daycare & Grooming</h1>
+                <img class="w-20 md:w-28 lg:w-36 mr-10" src="img/CatPaw.svg" alt="">
+                <p class="font-medium text-sm md:text-base">Selamat datang di Daycare dan Grooming Joy Cat, tempat di mana kucing Anda akan mendapatkan perawatan dan perhatian terbaik saat Anda tidak berada di rumah. Kami menawarkan berbagai paket layanan yang dapat disesuaikan dengan kebutuhan Anda dan kucing kesayangan Anda.</p>
+            </div>
+        
+        <div class="flex flex-col px-[300px] md:px-[150px] xl:px-[250px] 2xl:px-[300px]">
+            <div class="flex flex-col lg:flex-row p-4 md:p-11 gap-5 md:gap-11" >
+                <img class="w-1/2 lg:w-[600px] h-auto rounded-2xl object-contain" src="img/daycare-1.jpg" alt="">
+                <div class="flex flex-col justify-center font-medium">
+                    <p class="text-left text-dark text-2xl md:text-3xl font-bold">Cat Daycare</p>
+                    <p class="text-dark pt-5 text-sm md:text-base">Butuh tempat yang aman dan nyaman untuk menitipkan kucing Anda? Daycare kami menyediakan lingkungan yang aman, bersih, dan penuh kasih sayang. Kucing Anda akan diawasi oleh staf profesional yang berpengalaman.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col  mt-[50px] md:mt-[100px] px-[300px] md:px-[150px] xl:px-[250px] 2xl:px-[450px]">
+            <p class="text-left text-dark text-2xl md:text-3xl font-bold mb-5">Paket Daycare</p>
+            <div class="flex flex-col justify-center md:flex-row gap-5 md:gap-11">
+                <div class="max-w-full md:max-w-lg rounded-2xl bg-white px-4 py-1">
+                    <div class="flex flex-col px-6 py-4">
+                        <div class="font-bold text-xl md:text-2xl mb-2">Daycare Sehari Penuh</div>
+                        <p class="text-lg md:text-xl font-medium mb-5">Rp200.000</p>
+                        <hr>
+                        <ul class="list-disc mt-2 font-medium text-sm md:text-base">
+                            <li>Durasi minimal 6 jam sampai dengan 24 jam</li>
+                            <li>Makanan, minuman, mainan, tempat istirahat, dan sesi bermain</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="max-w-full md:max-w-lg rounded-2xl bg-white px-4 py-1">
+                    <div class="flex flex-col px-6 py-4">
+                        <div class="font-bold text-xl md:text-2xl mb-2">Daycare Pekanan</div>
+                        <p class="text-lg md:text-xl font-medium mb-5">Rp950.000</p>
+                        <hr>
+                        <ul class="list-disc mt-2 font-medium text-sm md:text-base">
+                            <li>Durasi full 1 pekan</li>
+                            <li>Makanan, minuman, mainan, tempat istirahat, sesi bermain, dan pemeriksaan kesehatan ringan setiap hari</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0" class="flex items-center justify-center rounded-full bg-[#95BB6F]  hover:bg-lime-700 hover:transition hover:duration-300 p-3 md:p-6 text-white font-semibold gap-3 mt-5 md:mt-11 mb-10 md:mb-[100px]">
+                <img src="img/_WhatsApp.svg" alt="">
+                <p class="text-lg md:text-2xl font-semibold">Reservasi Sekarang</p>
+            </a>
+        </div>
+        <section class="bg-white">
+            <div class="flex flex-col px-[300px] mt-[50px] md:mt-[100px]">
+                <div class="flex flex-col lg:flex-row md:p-11 gap-5 md:gap-11 md:px-[150px] xl:px-[250px] 2xl:px-[400px]">
+                    <div class="flex flex-col justify-center font-medium">
+                        <p class="text-left text-dark text-2xl md:text-3xl font-bold">Cat Grooming</p>
+                        <p class="text-dark pt-5 text-sm md:text-base">Layanan grooming kami mencakup berbagai perawatan untuk menjaga kebersihan dan kesehatan bulu kucing Anda. Kami menggunakan produk yang aman dan teknik yang tepat untuk memastikan kucing Anda merasa nyaman selama perawatan.</p>
+                    </div>
+                    <img class="w-1/2 lg:w-[600px] h-auto rounded-2xl object-contain" src="img/daycare-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="flex flex-col mt-[50px] md:mt-[100px] px-[300px] md:px-[150px] xl:px-[250px] 2xl:px-[450px]">
+                <p class="text-left text-dark text-2xl md:text-3xl font-bold mb-5">Paket Grooming</p>
+                <div class="flex flex-col justify-center md:flex-row gap-5 md:gap-11">
+                    <div class="max-w-full md:max-w-lg rounded-2xl bg-light px-4 py-1">
+                        <div class="flex flex-col px-6 py-4">
+                            <div class="font-bold text-xl md:text-2xl mb-2">Basic</div>
+                            <p class="text-lg md:text-xl font-medium mb-5">Rp150.000</p>
+                            <hr>
+                            <ul class="list-disc mt-2 font-medium text-sm md:text-base">
+                                <li>Mandi, pengeringan, penyikatan bulu, pemotongan kuku, pembersihan telinga</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="max-w-full md:max-w-lg rounded-2xl bg-light px-4 py-1">
+                        <div class="flex flex-col px-6 py-4">
+                            <div class="font-bold text-xl md:text-2xl mb-2">Complete</div>
+                            <p class="text-lg md:text-xl font-medium mb-5">Rp250.000</p>
+                            <hr>
+                            <ul class="list-disc mt-2 font-medium text-sm md:text-base">
+                                <li>Mandi, pengeringan, penyikatan bulu, pemotongan kuku, pembersihan telinga, pemotongan bulu (jika diperlukan), dan pengharum bulu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0" class="flex items-center justify-center rounded-full bg-[#95BB6F]  hover:bg-lime-700 hover:transition hover:duration-300 p-3 md:p-6 text-white font-semibold gap-3 mt-5 md:mt-11 mb-10 md:mb-[100px]">
+                    <img src="img/_WhatsApp.svg" alt="">
+                    <p class="text-lg md:text-2xl font-semibold">Reservasi Sekarang</p>
+                </a>
+            </div>
+        </section>
+        <footer>
+            <Footer />
+        </footer>
+</body>

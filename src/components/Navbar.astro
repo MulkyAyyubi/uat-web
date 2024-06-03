@@ -1,18 +1,73 @@
-<nav>
-    <div class="navLogo">
-        <img src="img/logo.png" alt="logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .open .line-1 {
+            transform: translateY(12px) rotate(45deg);
+        }
+
+        .open .line-2 {
+            opacity: 0;
+        }
+
+        .open .line-3 {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-[url('/img/pawpattern.png')] bg-white shadow-2xl border-2 border-white rounded-full flex justify-between py-3 px-10 fixed inset-x-5 top-5 font-medium items-center z-10">
+        <a href="/">
+            <img src="img/logo.png" alt="logo">
+        </a>
+
+        <ul class="hidden md:flex justify-end items-center text-dark font-semibold gap-8 text-lg">
+            <li><a href="/about">Tentang Kami</a></li>
+            <li><a href="/klinik">Klinik</a></li>
+            <li><a href="/daycare">Daycare & Grooming</a></li>
+            <li><a href="/adopsi">Adopsi</a></li>
+        </ul>
+
+        <div id="hamburger" class="flex md:hidden flex-col gap-1.5 cursor-pointer">
+            <div class="bg-black w-8 h-1 transition duration-300 transform"></div>
+            <div class="bg-black w-8 h-1 transition duration-300 transform"></div>
+            <div class="bg-black w-8 h-1 transition duration-300 transform"></div>
+        </div>
+    </nav>
+
+    <div id="dropdown-menu" class="hidden flex flex-col items-center fixed inset-x-5 top-36 rounded-t-3xl bottom-0 z-10 bg-white bg-[url('/img/pawpattern.png')]">
+        <ul class="text-dark font-semibold space-y-5 text-2xl text-center mt-10">
+            <li><a href="/about">Tentang Kami</a></li>
+            <li><a href="/klinik">Klinik</a></li>
+            <li><a href="/daycare">Daycare & Grooming</a></li>
+            <li><a href="/adopsi">Adopsi</a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0" target="_blank">
+                <img src="/img/wa.svg" alt="" class="inline">
+                0812-3456-78910
+            </a></li>
+        </ul>
     </div>
 
-    <ul class="navList">
-        <li>Tentang Kami</li>
-        <li>Klinik</li>
-        <li>Daycare & Grooming</li>
-        <li>Adopsi</li>
-    </ul>
-    <div class="navHamburger">
-        <div class="navHamburgerBar"></div>
-        <div class="navHamburgerBar"></div>
-        <div class="navHamburgerBar"></div>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('dropdown-menu');
+            const lines = hamburger.children;
 
-</nav>
+            hamburger.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
+                hamburger.classList.toggle('open');
+
+                // Animate the lines to form an "X"
+                lines[0].classList.toggle('line-1');
+                lines[1].classList.toggle('line-2');
+                lines[2].classList.toggle('line-3');
+            });
+        });
+    </script>
+</body>
+</html>

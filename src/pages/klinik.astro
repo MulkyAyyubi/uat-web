@@ -1,0 +1,95 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import '@fontsource/barlow'
+import '@fontsource/barlow/600.css'
+import '@fontsource/barlow/700.css'
+import '@fontsource/barlow/800.css'
+import '@fontsource/barlow/900.css'
+---
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klinik</title>
+</head>
+<body>
+    <Navbar />
+    <div class="flex flex-col bg-light">
+        <img class="w-full h-[300px] sm:h-[400px] md:h-[600px] object-cover" src="img/hero-clinic.jpg" alt="">
+        <div class="flex flex-col lg:flex-row gap-5 my-10 px-[400px] md:px-[150px] lg:px-[250px] xl:px-[400px]">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl text-left text-dark font-extrabold">Klinik Kucing</h1>
+            <img class="w-16 sm:w-20 md:w-36 mr-10" src="img/CatPaw.svg" alt="">
+            <p class="font-medium text-sm sm:text-base md:text-lg">Selamat datang di Klinik Kucing Joy Cat, tempat di mana kesehatan dan kesejahteraan kucing Anda adalah prioritas utama kami. Kami menyediakan berbagai layanan medis dengan dukungan tim dokter hewan yang berpengalaman dan fasilitas modern.</p>
+        </div>
+        <div class="flex flex-col px-[300px] space-y-11 md:px-[100px] lg:px-[200px] xl:px-[300px] 2xl:px-[400px] my-10 sm:my-20">
+            <div class="flex flex-col md:flex-row gap-5">
+                <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">1. Pemeriksaan Kesehatan Rutin</h1>
+                <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Kami menawarkan pemeriksaan kesehatan rutin untuk memastikan kucing Anda dalam kondisi prima. Pemeriksaan ini meliputi pengecekan fisik, pengukuran berat badan, dan evaluasi kesehatan secara keseluruhan.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+                <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">2. Vaksinasi</h1>
+                <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Lindungi kucing Anda dari penyakit berbahaya dengan vaksinasi yang tepat waktu. Kami menyediakan vaksinasi lengkap sesuai dengan jadwal yang direkomendasikan oleh dokter hewan.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+                <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">3. Pengobatan Penyakit</h1>
+                <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Apapun penyakit yang mungkin dihadapi kucing Anda, kami siap memberikan diagnosis yang akurat dan pengobatan yang efektif. Tim kami berkomitmen untuk memberikan perawatan terbaik agar kucing Anda segera pulih.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+                <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">4. Bedah</h1>
+                <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Klinik kami dilengkapi dengan ruang operasi yang steril dan peralatan modern untuk melakukan berbagai prosedur bedah, dari operasi minor hingga operasi mayor. Dokter hewan kami akan memberikan penjelasan mendetail dan dukungan pasca-operasi.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+                <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">5. Konsultasi Kesehatan</h1>
+                <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Punya pertanyaan tentang kesehatan kucing Anda? Kami menyediakan layanan konsultasi kesehatan untuk memberikan informasi dan saran yang Anda butuhkan. Baik secara langsung di klinik atau melalui konsultasi online.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5">
+                <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">6. Laboratorium Diagnostik</h1>
+                <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Dengan fasilitas laboratorium yang lengkap, kami dapat melakukan berbagai tes diagnostik seperti tes darah, urin, dan lainnya untuk mendukung diagnosis yang akurat.</p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="flex flex-col bg-white px-4 md:px-[100px] lg:px-[200px] xl:px-[300px] 2xl:px-[400px] py-11">
+            <h1 class="text-dark px-[400px] text-xl sm:text-2xl md:text-3xl font-bold pb-11">Jadwal Dokter</h1>
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="w-full flex flex-row gap-7 pl-[400px]">
+                    <img class="rounded-full w-24 h-24 sm:w-36 sm:h-36 object-cover" src="img/dokter-bima-sakti.jpeg" alt="">
+                    <div>
+                        <h1 class="text-dark text-lg sm:text-xl font-bold pb-2 sm:pb-5">dr. Bima Sakti</h1>
+                        <hr class="pb-2 sm:pb-5">
+                        <p class="text-dark">Senin, Rabu, Jum'at</p>
+                        <p class="text-dark pb-2 sm:pb-5">08.00 - 15.00</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="w-full flex flex-row gap-7">
+                    <img class="rounded-full w-24 h-24 sm:w-36 sm:h-36 object-cover" src="img/dokter-andromeda.jpeg" alt="">
+                    <div>
+                        <h1 class="text-dark text-lg sm:text-xl font-bold pb-2 sm:pb-5">dr. Andromeda</h1>
+                        <hr class="pb-2 sm:pb-5">
+                        <p class="text-dark">Selasa, Kamis, Sabtu</p>
+                        <p class="text-dark pb-2 sm:pb-5">10.00 - 17.00</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row text-white rounded-2xl bg-[#5FB7A7] my-10 p-6 sm:p-11">
+                <div class="flex-1 flex flex-col justify-center">
+                    <p class="text-lg sm:text-xl md:text-3xl">Cek antrian klinik dan lakukan reservasi melalui nomor berikut:</p>
+                    <div class="flex pt-4 sm:pt-7 items-center">
+                        <img class="w-8 h-8 sm:w-10 sm:h-10" src="img/_WhatsApp.svg" alt="">
+                        <a class="text-xl sm:text-2xl md:text-4xl font-semibold ml-2" href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0">0812-3456-78910</a>
+                    </div>
+                </div>
+                <img class="flex-1 w-full md:w-1/2 rounded-2xl object-cover mt-4 md:mt-0" src="img/cat-green.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <Footer />
+    </footer>
+</body>
+
