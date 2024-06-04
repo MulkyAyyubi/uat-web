@@ -1,11 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
-import '@fontsource/barlow'
-import '@fontsource/barlow/600.css'
-import '@fontsource/barlow/700.css'
-import '@fontsource/barlow/800.css'
-import '@fontsource/barlow/900.css'
+import '../styles/global.css'
 ---
 
 <html lang="en">
@@ -19,12 +15,12 @@ import '@fontsource/barlow/900.css'
     <Navbar />
     <div class="flex flex-col bg-light">
         <img class="w-full h-[300px] sm:h-[400px] md:h-[600px] object-cover" src="img/hero-clinic.jpg" alt="">
-        <div class="flex flex-col lg:flex-row gap-5 my-10 px-[400px] md:px-[150px] lg:px-[250px] xl:px-[400px]">
+        <div class="flex flex-col lg:flex-row gap-5 my-10 px-[50px] lg:px-[250px] xl:px-[400px]">
             <h1 class="text-3xl sm:text-4xl md:text-6xl text-left text-dark font-extrabold">Klinik Kucing</h1>
             <img class="w-16 sm:w-20 md:w-36 mr-10" src="img/CatPaw.svg" alt="">
             <p class="font-medium text-sm sm:text-base md:text-lg">Selamat datang di Klinik Kucing Joy Cat, tempat di mana kesehatan dan kesejahteraan kucing Anda adalah prioritas utama kami. Kami menyediakan berbagai layanan medis dengan dukungan tim dokter hewan yang berpengalaman dan fasilitas modern.</p>
         </div>
-        <div class="flex flex-col px-[300px] space-y-11 md:px-[100px] lg:px-[200px] xl:px-[300px] 2xl:px-[400px] my-10 sm:my-20">
+        <div class="flex flex-col space-y-11 px-[50px] lg:px-[200px] xl:px-[300px] 2xl:px-[400px] my-10 sm:my-20">
             <div class="flex flex-col md:flex-row gap-5">
                 <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold w-full md:w-1/2">1. Pemeriksaan Kesehatan Rutin</h1>
                 <p class="w-full md:w-1/2 font-semibold text-sm sm:text-base md:text-lg">Kami menawarkan pemeriksaan kesehatan rutin untuk memastikan kucing Anda dalam kondisi prima. Pemeriksaan ini meliputi pengecekan fisik, pengukuran berat badan, dan evaluasi kesehatan secara keseluruhan.</p>
@@ -52,12 +48,12 @@ import '@fontsource/barlow/900.css'
         </div>
     </div>
     <section>
-        <div class="flex flex-col bg-white px-4 md:px-[100px] lg:px-[200px] xl:px-[300px] 2xl:px-[400px] py-11">
-            <h1 class="text-dark px-[400px] text-xl sm:text-2xl md:text-3xl font-bold pb-11">Jadwal Dokter</h1>
-            <div class="flex flex-col md:flex-row gap-10">
-                <div class="w-full flex flex-row gap-7 pl-[400px]">
-                    <img class="rounded-full w-24 h-24 sm:w-36 sm:h-36 object-cover" src="img/dokter-bima-sakti.jpeg" alt="">
-                    <div>
+        <div class="flex flex-col bg-white px-6 sm:px-12 md:px-24 xl:px-44 2xl:px-80 py-11">
+            <h1 class="text-dark text-xl sm:text-2xl md:text-3xl font-bold pb-11">Jadwal Dokter</h1>
+            <div class="flex flex-col xl:flex-row mx-auto gap-10">
+                <div class="w-full flex flex-col items-center md:flex-row gap-7">
+                    <img class="rounded-full size-[300px] object-cover" src="img/dokter-bima-sakti.jpeg" alt="">
+                    <div class="w-fit">
                         <h1 class="text-dark text-lg sm:text-xl font-bold pb-2 sm:pb-5">dr. Bima Sakti</h1>
                         <hr class="pb-2 sm:pb-5">
                         <p class="text-dark">Senin, Rabu, Jum'at</p>
@@ -65,8 +61,8 @@ import '@fontsource/barlow/900.css'
                         <hr>
                     </div>
                 </div>
-                <div class="w-full flex flex-row gap-7">
-                    <img class="rounded-full w-24 h-24 sm:w-36 sm:h-36 object-cover" src="img/dokter-andromeda.jpeg" alt="">
+                <div class="w-full flex flex-col items-center md:flex-row gap-7">
+                    <img class="rounded-full size-[300px] object-cover" src="img/dokter-andromeda.jpeg" alt="">
                     <div>
                         <h1 class="text-dark text-lg sm:text-xl font-bold pb-2 sm:pb-5">dr. Andromeda</h1>
                         <hr class="pb-2 sm:pb-5">
@@ -76,12 +72,12 @@ import '@fontsource/barlow/900.css'
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row text-white rounded-2xl bg-[#5FB7A7] my-10 p-6 sm:p-11">
-                <div class="flex-1 flex flex-col justify-center">
+            <div class="flex flex-col md:flex-row text-white rounded-2xl bg-[#5FB7A7] my-10">
+                <div class="flex-1 flex flex-col justify-center px-20">
                     <p class="text-lg sm:text-xl md:text-3xl">Cek antrian klinik dan lakukan reservasi melalui nomor berikut:</p>
                     <div class="flex pt-4 sm:pt-7 items-center">
                         <img class="w-8 h-8 sm:w-10 sm:h-10" src="img/_WhatsApp.svg" alt="">
-                        <a class="text-xl sm:text-2xl md:text-4xl font-semibold ml-2" href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0">0812-3456-78910</a>
+                        <a class="text-xl sm:text-2xl md:text-4xl font-semibold ml-2" href="https://wa.me/62812345678910">0812-3456-78910</a>
                     </div>
                 </div>
                 <img class="flex-1 w-full md:w-1/2 rounded-2xl object-cover mt-4 md:mt-0" src="img/cat-green.jpg" alt="">

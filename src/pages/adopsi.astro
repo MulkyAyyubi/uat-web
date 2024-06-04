@@ -1,11 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
-import '@fontsource/barlow'
-import '@fontsource/barlow/600.css'
-import '@fontsource/barlow/700.css'
-import '@fontsource/barlow/800.css'
-import '@fontsource/barlow/900.css'
+import '../styles/global.css'
 ---
 
 <html lang="en">
@@ -136,9 +132,9 @@ import '@fontsource/barlow/900.css'
         </div>
 </div>
 <div class=" bg-light py-[58px] ">
-    <div class="flex gap-8 m-10">
+    <div class="flex gap-8 m-10 justify-center lg:justify-start">
         <!-- CRAD ONE -->
-        <div class="flex flex-col gap-5 text-dark bg-white p-4 rounded-2xl w-full max-w-[420px]">
+        <div class="flex flex-col gap-5 text-dark bg-white p-4 rounded-2xl w-full max-w-[420px] md:max-w-md lg:max-w-[420px]">
             <img class="rounded-2xl h-240 object-cover" src="img/adopsi-anabell.jpg" alt="card1">
             <h3 class="font-bold text-4xl">Anabell</h1>
             <div class="flex gap-11">
@@ -157,7 +153,7 @@ import '@fontsource/barlow/900.css'
                     <li>Tidak bisa diam, clingy</li>
                 </ul>
             </div>
-            <a href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0" class="flex items-center justify-center rounded-full bg-[#95BB6F] p-5 text-white font-semibold gap-3 mt-4" >
+            <a href="https://api.whatsapp.com/send/?phone=0812345678910&text&type=phone_number&app_absent=0" class="flex items-center justify-center rounded-full w-full bg-[#95BB6F] p-5 text-white font-semibold gap-3 mt-4" >
                 <img src="img/_WhatsApp.svg" alt="">
                 <p class="text-2xl font-semibold">Adopsi</p>
             </a>
@@ -171,18 +167,18 @@ import '@fontsource/barlow/900.css'
             <p class="text-lg md:text-xl lg:text-2xl mb-4 md:mb-9">Isi form di bawah ini, kami akan memberitahu Anda jika ada yang menitipkan kucing yang Anda inginkan.</p>
             <form class="">
                 <label class="font-bold text-lg md:text-xl" for="name">Nama
-                    <input class="block w-full font-light p-3 rounded-md mb-4 md:mb-9" id="name" type="text" placeholder="Tuliskan nama Anda" required>
+                    <input class="block w-full font-light p-3 rounded-md mb-4 md:mb-9" minlength="5" id="name" type="text" placeholder="Tuliskan nama Anda" required>
                 </label> 
                 
                 <label class="font-bold text-lg md:text-xl" for="email">Email
-                    <input class="block w-full font-light p-3 rounded-md mb-4 md:mb-9" id="email" type="text"  placeholder="Alamat email Anda" required>
+                    <input class="block w-full font-light p-3 rounded-md mb-4 md:mb-9" id="email" type="email"  placeholder="Alamat email Anda" required>
                 </label>
                 
                 <label class="font-bold text-lg md:text-xl" for="Address">Preferensi kucing yang diinginkan
                     <input class="block w-full font-light p-3 rounded-md mb-4 md:mb-9" id="email" type="text" placeholder="Contoh: Persia, Betina, umur 3 tahun ke atas, putih polos" required>
                 </label>
 
-                <button type="submit" class="flex items-center justify-center rounded-full bg-dark hover:bg-sky-400 hover:transition hover:duration-300 p-4 md:p-5 text-white font-semibold gap-3 mt-4" id="submit">
+                <button type="submit" class="flex items-center justify-center w-full rounded-full bg-dark hover:bg-sky-400 hover:transition hover:duration-300 p-4 md:p-5 text-white font-semibold gap-3 mt-4" id="submit">
                     <p class="text-lg md:text-xl font-semibold">Submit</p>
                 </button>
             </form>
@@ -210,9 +206,11 @@ import '@fontsource/barlow/900.css'
     const naming = document.querySelector("#sentence");
 
     submitBtn.addEventListener("click", (skibidi) => {
-        skibidi.preventDefault();
-        form.classList.toggle("hidden");
-        naming.classList.toggle("hidden");
-        naming.classList.toggle("flex");
+        if (form.checkValidity()) {
+            skibidi.preventDefault();
+            form.classList.toggle("hidden");
+            naming.classList.toggle("hidden");
+            naming.classList.toggle("flex");
+        }
     })
 </script>
